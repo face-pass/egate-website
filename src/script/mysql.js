@@ -3,10 +3,10 @@
 // const app = express()
 
 const config = {
-    host: "attendance.mysql.database.azure.com",
-    user: "E-gate",
-    password: " H03m1x2M15o5",
-    database: "test",
+    host: "your database url",
+    user: "database user",
+    password: " database password",
+    database: "database name",
     port: 3306, // default mysql port number
     // ssl: {ca: fs.readFileSync("./ssl/BaltimoreCyberTrustRoot.crt.pem")}
 };
