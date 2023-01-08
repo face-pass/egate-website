@@ -1,13 +1,12 @@
-import {useState, useEffect} from 'react'
-import mysql from '../script/mysql';
+import {useState, useEffect, useCallback} from 'react'
 
 function UserList(){
-    const [message, setMessage] = useState('')
+    const [message, setMessage] = useState([])
 
     useEffect(() => {
-        mysql
-        .then((res) => res.json())
-        .then((data) => setMessage(data));
+    fetch("/api/getCurrentAttandanceList", {mode: "cors"})
+    .then((res) => res.json())
+    .then((data) => setMessage(data.results))
     }, [])
 
     return (
